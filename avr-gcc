@@ -1,0 +1,4 @@
+#!/bin/bash
+echo $@ >> /tmp/avr_gcc
+PARAMS=`echo $@ | sed 's/-assembler-with-cpp/-x assembler-with-cpp/g'`
+avr-gcc_orig $PARAMS
